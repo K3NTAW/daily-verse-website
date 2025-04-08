@@ -109,11 +109,6 @@ export default function HomePage() {
         </Card>
       </section>
 
-      {/* ThreeDPhotoCarouselDemo */}
-      <section className="container mx-auto px-4 py-16">
-        <ThreeDPhotoCarouselDemo />
-      </section>
-
       {/* Footer */}
       <footer className="container mx-auto px-4 py-8 text-center text-muted-foreground">
         <p>© 2024 Verse Joy. All rights reserved.</p>

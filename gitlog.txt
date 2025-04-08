@@ -1,0 +1,23 @@
+commit b84ba12f37cf1c67570eeaf088a9d1aedfe60252
+Author: k3ntaw <kenta.waibel@gmail.com>
+Date:   Tue Apr 8 16:19:02 2025 +0200
+
+    feature: screnshot carousel    | Kenta Waibel
+
+commit 22e9e20d258722a8e77d061db7473a1f8d0d80b0
+Author: k3ntaw <kenta.waibel@gmail.com>
+Date:   Tue Apr 8 16:09:39 2025 +0200
+
+    feature: screnshot carousel    | Kenta Waibel
+
+commit 7ad5789ef9711dce23f0505415c44924bd377aa3
+Author: k3ntaw <kenta.waibel@gmail.com>
+Date:   Tue Apr 8 14:33:32 2025 +0200
+
+    feature: screnshot carousel    | Kenta Waibel
+
+commit 5ed912824150b7d1880cd84d38fa70c611424c05
+Author: k3ntaw <kenta.waibel@gmail.com>
+Date:   Tue Apr 8 14:04:52 2025 +0200
+
+    init: initialize Project daily verse website   | Kenta Waibel
