@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Book, Search, Heart, Bell, Home as HomeIcon, Youtube, BookOpen } from "lucide-react";
 import { DownloadButton } from "@/components/DownloadButton";
+import { ScreenshotCarousel } from "@/components/ScreenshotCarousel";
 
 export default function HomePage() {
   return (
@@ -89,6 +90,11 @@ export default function HomePage() {
             </ul>
           </Card>
         </div>
+      </section>
+
+      {/* Screenshot Carousel */}
+      <section className="container mx-auto px-4 py-8">
+        <ScreenshotCarousel />
       </section>
 
       {/* Download Section */}
