@@ -128,53 +128,13 @@ const Carousel = memo(
 
     return (
       <div
-        className="flex h-full w-full items-center justify-center bg-mauve-dark-2 relative"
+        className="flex h-full w-full items-center justify-center bg-mauve-dark-2"
         style={{
           perspective: "1000px",
           transformStyle: "preserve-3d",
           willChange: "transform",
         }}
       >
-        <button
-          className="absolute left-0 z-10 p-4 text-white hover:bg-white/10 rounded-r-lg transition-colors"
-          onClick={() => {
-            if (!isCarouselActive) return;
-            const rotationStep = 360 / faceCount;
-            controls.start({
-              rotateY: rotation.get() + rotationStep,
-              transition: {
-                type: "spring",
-                stiffness: 100,
-                damping: 30,
-                mass: 0.1,
-              },
-            });
-          }}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="m15 18-6-6 6-6"/>
-          </svg>
-        </button>
-        <button
-          className="absolute right-0 z-10 p-4 text-white hover:bg-white/10 rounded-l-lg transition-colors"
-          onClick={() => {
-            if (!isCarouselActive) return;
-            const rotationStep = 360 / faceCount;
-            controls.start({
-              rotateY: rotation.get() - rotationStep,
-              transition: {
-                type: "spring",
-                stiffness: 100,
-                damping: 30,
-                mass: 0.1,
-              },
-            });
-          }}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="m9 18 6-6-6-6"/>
-          </svg>
-        </button>
         <motion.div
           drag={isCarouselActive ? "x" : false}
           className="relative flex h-full origin-center cursor-grab justify-center active:cursor-grabbing"
