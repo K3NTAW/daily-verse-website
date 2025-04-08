@@ -80,3 +80,77 @@
     @apply bg-background text-foreground;
   }
 }
+
+.embla {
+  overflow: hidden;
+  position: relative;
+}
+
+.embla__container {
+  display: flex;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+
+.embla__slide {
+  flex: 0 0 33.33%;
+  min-width: 0;
+  position: relative;
+  perspective: 1000px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.embla__slide__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.embla__slide__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.5s ease;
+}
+
+/* Position the active slide */
+.embla__slide--active {
+  z-index: 2;
+  transform: translateX(0) scale(1);
+}
+
+/* Position the previous slide */
+.embla__slide--prev {
+  z-index: 1;
+  transform: translateX(-50%) scale(0.9);
+  opacity: 0.8;
+}
+
+/* Position the next slide */
+.embla__slide--next {
+  z-index: 1;
+  transform: translateX(50%) scale(0.9);
+  opacity: 0.8;
+}
+
+/* Add 3D rotation to non-active slides */
+.embla__slide--prev .embla__slide__img {
+  transform: rotateY(20deg);
+}
+
+.embla__slide--next .embla__slide__img {
+  transform: rotateY(-20deg);
+}
+
+/* Ensure active slide has no rotation */
+.embla__slide--active .embla__slide__img {
+  transform: rotateY(0);
+}

@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Book, Search, Heart, Bell, Home as HomeIcon, Youtube, BookOpen } from "lucide-react";
 import { DownloadButton } from "@/components/DownloadButton";
-import { ScreenshotCarousel } from "@/components/ScreenshotCarousel";
+import { ThreeDPhotoCarouselDemo } from "@/components/3d-carousel-demo"
 
 export default function HomePage() {
   return (
@@ -94,7 +94,8 @@ export default function HomePage() {
 
       {/* Screenshot Carousel */}
       <section className="container mx-auto px-4 py-8">
-        <ScreenshotCarousel />
+        <h2 className="text-3xl font-bold text-center mb-8">App Screenshots</h2>
+        <ThreeDPhotoCarouselDemo />
       </section>
 
       {/* Download Section */}
@@ -106,6 +107,11 @@ export default function HomePage() {
           </p>
           <DownloadButton />
         </Card>
+      </section>
+
+      {/* ThreeDPhotoCarouselDemo */}
+      <section className="container mx-auto px-4 py-16">
+        <ThreeDPhotoCarouselDemo />
       </section>
 
       {/* Footer */}
